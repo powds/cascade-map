@@ -1,0 +1,55 @@
+# CascadeMap Configuration
+
+analysis:
+  include_patterns:
+    - "*.css"
+    - "*.scss"
+    - "*.sass"
+    - "*.less"
+    - "*.jsx"
+    - "*.tsx"
+    - "*.vue"
+    - "*.html"
+  exclude_patterns:
+    - "node_modules"
+    - "*.min.css"
+    - "dist"
+    - "build"
+
+tokens:
+  color:
+    detect_hex: true
+    detect_rgb: true
+    detect_rgba: true
+    detect_hsl: true
+    similarity_threshold: 0.85
+  spacing:
+    detect_px: true
+    detect_rem: true
+    detect_em: true
+    tolerance_px: 2.0
+  font:
+    detect_family: true
+    detect_size: true
+  shadow:
+    detect: true
+  border_radius:
+    detect: true
+  z_index:
+    detect: true
+
+thresholds:
+  consistency_excellent: 90
+  consistency_good: 70
+  consistency_fair: 50
+  high_impact_file_count: 5
+
+debt_calculation:
+  hourly_rate: 50
+  color_consolidation_hours: 0.5
+  spacing_consolidation_hours: 0.25
+  file_review_hours_per_file: 0.05
+
+notifications:
+  telegram:
+    enabled: true
